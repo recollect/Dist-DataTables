@@ -5690,7 +5690,7 @@
 	
 				// Use getBounding... where possible (not IE8-) because it can give
 				// sub-pixel accuracy, which we then want to round up!
-				var bounding = browser.bBounding ?
+				var bounding = browser.bBounding && headerCells[i] ?
 					Math.ceil( headerCells[i].getBoundingClientRect().width ) :
 					cell.outerWidth();
 	
